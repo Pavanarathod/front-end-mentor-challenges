@@ -40,18 +40,40 @@ const TaskOne = () => {
           </div>
           <div className="hidden lg:inline-flex items-center space-x-10">
             <Link href="/">Login</Link>
-            <button className="border border-gray-500 px-6 py-2 rounded-lg focus:outline-none transition-all duration-150 delay-100 ease-in-out hover:bg-gray-800 hover:text-white">
+            <button className="border border-gray-500 px-5 py-1 rounded-xl focus:outline-none transition-all duration-150 delay-100 ease-in-out hover:bg-gray-800 hover:text-white">
               Register
             </button>
           </div>
         </nav>
       </header>
 
-      <main className="container mx-auto px-5">
-        <div className="flex flex-col-reverse lg:flex-row">
-          <div>one</div>
+      <main className="container mx-auto px-5 mt-10">
+        <div className="flex flex-col-reverse lg:flex-row lg:space-x-7 lg:max-w-6xl lg:mx-auto ">
+          <div className="flex flex-col items-center lg:items-start space-y-5 lg:space-y-0 mt-12 lg:mt-0">
+            <h1 className="font-bold text-4xl lg:text-8xl text-gray-800">
+              Make remote work
+            </h1>
+            <p className="text-center lg:text-left font-bold text-xl text-gray-400">
+              Get your team in sync no matter your location. Streamline process,
+              create team rituals. and watch productivityu soar.
+            </p>
+            <div>
+              <button className="px-10 py-2 bg-gray-900 text-white focus:outline-none rounded-xl">
+                Learn More
+              </button>
+            </div>
+          </div>
           <div>
-            <img src="/images/image-hero-mobile.png" alt="" />
+            <img
+              src="/images/image-hero-mobile.png"
+              alt="logo-image"
+              className="lg:hidden"
+            />
+            <img
+              src="/images/image-hero-desktop.png"
+              alt="logo-image"
+              className="hidden lg:inline-flex"
+            />
           </div>
         </div>
       </main>

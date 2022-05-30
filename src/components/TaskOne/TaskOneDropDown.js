@@ -40,40 +40,38 @@ const TaskOneDropDown = ({
         >
           <Listbox.Options className="absolute mt-2 py-3 px-4  min-h-60  rounded-md text-base border bg-white border-gray-200 shadow-2xl focus:outline-none sm:text-sm">
             {optionValue.map((person, personIdx) => (
-              <>
-                <div className="flex items-center space-x-2" key={personIdx}>
-                  <div className="w-5">
-                    <img src={person.imageLink} alt="" className="h-4 w-4" />
-                  </div>
-                  <div>
-                    <Listbox.Option
-                      className={({ active }) =>
-                        `relative select-none py-2 cursor-pointer ${
-                          active ? "text-indigo-700" : "text-gray-900"
-                        }`
-                      }
-                      value={person}
-                    >
-                      {({ selected }) => (
-                        <>
-                          <span
-                            className={`block truncate ${
-                              selected ? "font-medium" : "font-normal"
-                            }`}
-                          >
-                            {person.name}
-                          </span>
-                          {/* {selected ? (
+              <div className="flex items-center space-x-2" key={personIdx}>
+                <div className="w-5">
+                  <img src={person.imageLink} alt="" className="h-4 w-4" />
+                </div>
+                <div>
+                  <Listbox.Option
+                    className={({ active }) =>
+                      `relative select-none py-2 cursor-pointer ${
+                        active ? "text-indigo-700" : "text-gray-900"
+                      }`
+                    }
+                    value={person}
+                  >
+                    {({ selected }) => (
+                      <>
+                        <span
+                          className={`block truncate ${
+                            selected ? "font-medium" : "font-normal"
+                          }`}
+                        >
+                          {person.name}
+                        </span>
+                        {/* {selected ? (
                       <span className="absolute inset-y-0 left-0 flex items-center pl-3 text-amber-600">
                         <CheckIcon className="h-5 w-5" aria-hidden="true" />
                       </span>
                     ) : null} */}
-                        </>
-                      )}
-                    </Listbox.Option>
-                  </div>
+                      </>
+                    )}
+                  </Listbox.Option>
                 </div>
-              </>
+              </div>
             ))}
           </Listbox.Options>
         </Transition>
