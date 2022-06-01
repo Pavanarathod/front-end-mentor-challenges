@@ -20,7 +20,7 @@ const DropDown = ({ selected, setSelected, optionValue, defaultValue }) => {
           leaveFrom="opacity-100"
           leaveTo="opacity-0"
         >
-          <Listbox.Options className="absolute mt-12 py-3  min-h-60 text-base border bg-white border-gray-100 shadow-md focus:outline-none sm:text-sm">
+          <Listbox.Options className="absolute mt-3 lg:mt-12 py-3  min-h-60 text-base border bg-white border-gray-100 z-50 shadow-md focus:outline-none sm:text-sm">
             {optionValue.map((person, personIdx) => (
               <div
                 className="flex items-center w-full space-x-2"

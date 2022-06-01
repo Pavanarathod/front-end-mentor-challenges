@@ -1,11 +1,7 @@
 import Header from "../Header";
 
 const TaskTwo = () => {
-  return (
-    <>
-      <Header />
-    </>
-  );
+  return <></>;
 };
 
 export default TaskTwo;

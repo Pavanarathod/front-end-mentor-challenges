@@ -4,7 +4,7 @@ import Header from "../components/Header";
 const Diagnosis = () => {
   return (
     <>
-      <Header />
+      <h1>this is diagnosis</h1>
     </>
   );
 };

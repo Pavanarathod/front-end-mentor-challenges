@@ -1,3 +1,4 @@
+/* eslint-disable @next/next/no-html-link-for-pages */
 /* eslint-disable @next/next/no-img-element */
 import { useState } from "react";
 import Link from "next/link";
@@ -119,7 +120,7 @@ const Header = () => {
           </div>
 
           {toggle && (
-            <div className="absolute bg-red-500 w-full right-24 flex flex-col top-36 justify-center items-center space-x-5 text-sm text-gray-500">
+            <div className="absolute transition-all delay-100 duration-300 ease-in-out w-full right-0 py-10 flex flex-col top-36 justify-center items-center space-x-5 text-lg space-y-5 text-gray-500">
               {/* ITEMS */}
               <DropDown
                 selected={selectedOncologist}
@@ -127,7 +128,7 @@ const Header = () => {
                 defaultValue={"Oncologist"}
                 optionValue={oncologistOptions}
               />
-              <a
+              <Link
                 href="/hospital-service"
                 className={`${
                   router.pathname === "/hospital-service"
@@ -136,8 +137,8 @@ const Header = () => {
                 }`}
               >
                 Hospital Services
-              </a>
-              <a
+              </Link>
+              <Link
                 href="/diagnosis"
                 className={`${
                   router.pathname === "/diagnosis"
@@ -146,7 +147,7 @@ const Header = () => {
                 }`}
               >
                 Diagnosis
-              </a>
+              </Link>
               <DropDown
                 selected={selectedOncologist}
                 setSelected={setSelectedOncologist}
@@ -166,7 +167,7 @@ const Header = () => {
               </div>
 
               {/* BUTTONS */}
-              <div className="flex items-center flex-col space-x-5">
+              <div className="flex items-center flex-col space-y-5">
                 <div className="flex items-center space-x-2 border border-gray-500 px-1 rounded-full py-[2px]">
                   <UserIcon className="h-8 px-2 py-2 border border-gray-400 rounded-full" />
                   <span className="text-sm pr-2 truncate">Pavan</span>
