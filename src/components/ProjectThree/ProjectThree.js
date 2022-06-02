@@ -39,7 +39,7 @@ const ProjectThree = () => {
               blanditiis facere delectus,
             </p>
 
-            <button className="bg-orange-400 uppercase rounded-sm text-white px-10 text-sm py-4 focus:outline-none  tracking-[0.2rem]">
+            <button className="bg-orange-400 uppercase rounded-sm text-white w-64 h-16 text-sm  focus:outline-none  tracking-[0.2rem] transition-all delay-100 duration-500 ease-in-out hover:w-72">
               see Product
             </button>
           </div>
@@ -83,6 +83,41 @@ const ProjectThree = () => {
                 </div>
               </div>
             ))}
+          </div>
+        </div>
+      </section>
+
+      <section className="py-10 ">
+        {/* SPEAKER BANNER */}
+        <div className="container px-4 lg:px-0 max-w-7xl mx-auto">
+          <h1 className="text-4xl tracking-[0.2rem] text-gray-500 py-10">
+            Most Populer
+          </h1>
+
+          <div className="mt-10 h-[70vh] bg-orange-400 rounded-lg overflow-hidden">
+            <div className="max-w-4xl mx-auto grid grid-cols-2 relative items-center ">
+              <div className="h-[500px]">
+                <img
+                  src="/images/Speaker.png"
+                  alt="speaker"
+                  className="h-[400px] absolute top-36"
+                />
+              </div>
+              <div className="flex flex-col space-y-10">
+                <h1 className="font-bold uppercase text-6xl text-white w-60">
+                  ZX9 Speaker
+                </h1>
+                <p className="text-sm tracking-wide text-gray-200 w-96">
+                  Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+                  Voluptatem assumenda ut beatae amet fuga? Iure culpa
+                  temporibus a?
+                </p>
+
+                <button className="bg-black uppercase rounded-sm text-white w-64 h-16 text-sm  focus:outline-none  tracking-[0.2rem] transition-all delay-100 duration-500 ease-in-out hover:w-72">
+                  see Product
+                </button>
+              </div>
+            </div>
           </div>
         </div>
       </section>
