@@ -1,19 +1,35 @@
 /* eslint-disable @next/next/no-img-element */
-import React from "react";
+import React, { useState, useEffect } from "react";
 import Link from "next/link";
-import { ChevronRightIcon, ShoppingCartIcon } from "@heroicons/react/solid";
+import {
+  ChevronRightIcon,
+  MenuAlt3Icon,
+  ShoppingCartIcon,
+} from "@heroicons/react/solid";
 import productData from "../../utils/productData";
+import clsx from "clsx";
 
 const ProjectThree = () => {
+  const [loading, setLoading] = useState(false);
+
+  useEffect(() => {
+    setTimeout(() => {
+      setLoading(true);
+    }, 3000);
+  }, []);
+
   return (
     <>
       <div className="min-h-screen bg-gradient-to-r from-gray-900 to-gray-800">
         <header className="">
           <nav className="container h-24 px-4 lg:px-0 max-w-7xl mx-auto border-b border-gray-700 flex items-center justify-between">
+            <div className="lg:hidden">
+              <MenuAlt3Icon className="h-7 text-white" />
+            </div>
             <div>
               <h1 className="text-3xl text-gray-200 font-bold">audiophile</h1>
             </div>
-            <div className="text-gray-300 uppercase flex items-center justify-center space-x-5 flex-1 text-xs font-semibold mr-28">
+            <div className="text-gray-300 hidden uppercase lg:inline-flex items-center justify-center space-x-5 flex-1 text-xs font-semibold mr-28">
               <Link href="/">Home</Link>
               <Link href="/">Headphones</Link>
               <Link href="/">Speakers</Link>
@@ -25,21 +41,26 @@ const ProjectThree = () => {
           </nav>
         </header>
 
-        <section className="container px-4 lg:px-0 max-w-7xl mx-auto grid grid-cols-2 items-center mt-16">
-          <div className="flex flex-col space-y-10 items-start">
+        <section className="container px-4 lg:px-0 max-w-7xl mx-auto flex flex-col-reverse lg:grid lg:grid-cols-2 lg:items-center mt-16">
+          <div className="flex flex-col space-y-10 items-center mt-10 lg:mt-0 lg:items-start">
             <p className="uppercase text-gray-500 text-sm tracking-[0.7rem]">
               New Product
             </p>
-            <h1 className="text-gray-100 uppercase text-7xl font-semibold">
+            <h1 className="text-gray-100 uppercase lg:text-7xl font-semibold">
               XX99 Mark II Headphones
             </h1>
-            <p className="text-sm text-gray-400 w-[66%] tracking-wide">
+            <p className="text-sm text-center lg:text-left text-gray-400 w-[66%] tracking-wide">
               Lorem ipsum, dolor sit amet consectetur adipisicing elit. Culpa
               error mollitia, repellat officiis quidem vitae praesentium dolore
               blanditiis facere delectus,
             </p>
 
-            <button className="bg-orange-400 uppercase rounded-sm text-white w-64 h-16 text-sm  focus:outline-none  tracking-[0.2rem] transition-all delay-100 duration-500 ease-in-out hover:w-72">
+            <button
+              className={clsx(
+                "bg-orange-400 uppercase rounded-sm text-white w-64 h-16 text-sm  focus:outline-none  tracking-[0.2rem] transition-all delay-100 duration-500 ease-in-out hover:w-72",
+                loading && ""
+              )}
+            >
               see Product
             </button>
           </div>
@@ -47,7 +68,7 @@ const ProjectThree = () => {
             <img
               src="/images/Product.png"
               alt="product"
-              className="h-[500px]"
+              className="lg:h-[500px]"
             />
           </div>
         </section>
@@ -60,7 +81,7 @@ const ProjectThree = () => {
 
           {/* main card */}
 
-          <div className="grid grid-cols-3 gap-20 w-full mt-20">
+          <div className="grid lg:grid-cols-3 gap-20 w-full mt-20">
             {productData.map((item) => (
               <div
                 key={item.title}
