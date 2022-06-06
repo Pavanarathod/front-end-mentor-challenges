@@ -13,6 +13,7 @@ const Home = () => {
       {/* <ProjectThree /> */}
       {/* <Medium /> */}
       <LandingV1 />
+      <LandingV1 />
     </>
   );
 };
