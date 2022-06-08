@@ -1,6 +1,7 @@
 import React from "react";
 import LandingV1 from "../components/LandingV1/LandingV1";
 import Medium from "../components/Medium/Medium";
+import Motion from "../components/Motion/motion";
 import ProjectThree from "../components/ProjectThree/ProjectThree";
 import TaskOne from "../components/TaskOne/TaskOne";
 import TaskTwo from "../components/TaskTwo/TaskTwo";
@@ -12,8 +13,8 @@ const Home = () => {
       {/* <TaskTwo /> */}
       {/* <ProjectThree /> */}
       {/* <Medium /> */}
-      <LandingV1 />
-      <LandingV1 />
+      {/* <LandingV1 /> */}
+      <Motion />
     </>
   );
 };
