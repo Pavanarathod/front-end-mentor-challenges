@@ -1,5 +1,6 @@
 import React from "react";
 import Slider from "../components/Carousel/Slider";
+import FacebookDropdown from "../components/FacebookDropdown/FacebookDropdown";
 import LandingV1 from "../components/LandingV1/LandingV1";
 import Medium from "../components/Medium/Medium";
 import Motion from "../components/Motion/motion";
@@ -9,15 +10,16 @@ import TaskTwo from "../components/TaskTwo/TaskTwo";
 
 const Home = () => {
   return (
-    <main className="">
-      <TaskOne />
+    <>
+      {/* <TaskOne /> */}
       {/* <TaskTwo /> */}
       {/* <ProjectThree /> */}
       {/* <Medium /> */}
       {/* <LandingV1 /> */}
       {/* <Motion /> */}
       {/* <Slider /> */}
-    </main>
+      <FacebookDropdown />
+    </>
   );
 };
 
