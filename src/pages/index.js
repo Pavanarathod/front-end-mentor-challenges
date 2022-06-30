@@ -9,14 +9,14 @@ import TaskTwo from "../components/TaskTwo/TaskTwo";
 
 const Home = () => {
   return (
-    <main className="bg-black">
-      {/* <TaskOne /> */}
+    <main className="">
+      <TaskOne />
       {/* <TaskTwo /> */}
       {/* <ProjectThree /> */}
       {/* <Medium /> */}
       {/* <LandingV1 /> */}
       {/* <Motion /> */}
-      <Slider />
+      {/* <Slider /> */}
     </main>
   );
 };

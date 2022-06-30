@@ -1,5 +1,5 @@
 /* eslint-disable @next/next/no-img-element */
-import { Fragment, useState } from "react";
+import { Fragment, useCallback, useEffect, useState } from "react";
 import { Listbox, Transition } from "@headlessui/react";
 import { ChevronDownIcon, ChevronUpIcon } from "@heroicons/react/solid";
 
@@ -11,9 +11,11 @@ const TaskOneDropDown = ({
 }) => {
   const [dropOn, setDropON] = useState(false);
 
+  useEffect(() => {}, []);
+
   return (
     <Listbox value={selected} onChange={setSelected}>
-      <div onClick={() => setDropON(!dropOn)} className="relative">
+      <div onMouseEnter={() => setDropON(true)} className="relative">
         <Listbox.Button className="flex items-center space-x-2">
           <span className="block truncate text-gray-500 font-semibold hover:text-gray-900">
             {selected.name ? selected.name : defaultValue}
